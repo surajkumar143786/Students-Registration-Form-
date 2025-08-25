@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="/index.js" defer></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css">
+</head>
+
+<body class="bg-blue-200">
+
+    <!-- Header -->
+    <header class="p-4 text-center">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-shadow-3xl">
+            Student Registration Form
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl font-medium">
+            Register, edit, and delete student records with persistent storage.
+        </p>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="border bg-gray-100 p-4 rounded-xl shadow-2xl m-4">
+        <form class="grid gap-3" id="form">
+            <label for="name" class="text-lg">Student Name:</label>
+            <input id="name" type="text" placeholder="Enter Name" required
+                class="border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+
+            <label for="id" class="text-lg">Student Id:</label>
+            <input id="id" type="number" placeholder="Enter Id" required
+                class="border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+
+            <label for="email" class="text-lg">Email Id:</label>
+            <input id="email" type="email" placeholder="Enter Email" required
+                class="border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+
+            <label for="contact" class="text-lg">Contact Number:</label>
+            <input id="contact" type="number" placeholder="Enter Contact" required
+                class="border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+
+            <button id="button"
+                class="bg-green-600 text-white rounded-md py-2 hover:bg-green-700 transition-colors w-full sm:w-auto mt-2"
+                type="submit">
+                Add Student
+            </button>
+        </form>
+    </section>
+
+    <!-- Display Section -->
+    <section class="border rounded-lg p-4 m-4">
+        <h2 class="text-xl sm:text-2xl font-bold mb-3">Registered Students</h2>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full border bg-gray-600 text-white text-sm sm:text-base">
+                <thead>
+                    <tr>
+                        <th class="border p-2">Name</th>
+                        <th class="border p-2">Email</th>
+                        <th class="border p-2">Id</th>
+                        <th class="border p-2">Contact</th>
+                        <th class="border p-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody" class="border">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+
+</html>
